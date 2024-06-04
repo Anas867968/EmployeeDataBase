@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS public.departmenttest
+(
+    id integer NOT NULL DEFAULT nextval('departmenttest_id_seq'::regclass),
+    name character varying(255) COLLATE pg_catalog."default",
+    creationdate date,
+    departmenthead character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT departmenttest_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE IF NOT EXISTS public.employeetest
+(
+    id integer NOT NULL DEFAULT nextval('employeetest_id_seq'::regclass),
+    name character varying(255) COLLATE pg_catalog."default",
+    dateofbirth date,
+    salary double precision,
+    department character varying(255) COLLATE pg_catalog."default",
+    address character varying(255) COLLATE pg_catalog."default",
+    role character varying(255) COLLATE pg_catalog."default",
+    joiningdate date,
+    yearlybonuspercentage double precision,
+    reportingmanager character varying(255) COLLATE pg_catalog."default",
+    dept_id numeric(10,0),
+    CONSTRAINT employeetest_pkey PRIMARY KEY (id)
+)
